@@ -4,8 +4,9 @@ download_and_extract(){
   echo Downloaded component code
   curl -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip &>>$log_file
 
-
+echo $?
 
   echo Extracting $component
   unzip /tmp/$component.zip &>>$log_file
+  echo $?
 }
