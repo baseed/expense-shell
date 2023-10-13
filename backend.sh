@@ -12,7 +12,7 @@ echo add Application user
 useradd expense >>$log_file
 
 echo cleanup content
-rm -rf/app
+rm -rf /app
 
 mkdir /app
 cd /app
