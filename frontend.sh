@@ -1,5 +1,5 @@
 log_file=/tmp/expense.log
-cho installing nginx
+echo installing nginx
 dnf install nginx -y >>$log_file
 
 echo placing Expense config file
