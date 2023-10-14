@@ -54,6 +54,6 @@ echo download mysql
 dnf install mysql -y &>>$log_file
 stat_check
 echo load schema
-mysql -h 172.31.95.105 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
+mysql -h 172.31.80.97 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
 stat_check
 
