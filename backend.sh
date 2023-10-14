@@ -39,7 +39,7 @@ download_and_extract
 stat_check
 
 echo download dependence
-
+cd /app &>>$log_file
 npm install &>>$log_file
 
 stat_check
