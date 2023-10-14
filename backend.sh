@@ -34,19 +34,19 @@ mkdir /app
 cd /app
 download_and_extract
 
-echo download dependence
+echo download dependencies
 
 npm install &>>$log_file
 
 stat_check
 
-echo restart servoce
+echo start backend service
 systemctl daemon-reload &>>$log_file
 systemctl enable backend &>>$log_file
 systemctl start backend &>>$log_file
 stat_check
 
-echo download mysql
+echo download mysql client
 dnf install mysql -y &>>$log_file
 stat_check
 echo load schema
