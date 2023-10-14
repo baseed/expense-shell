@@ -8,7 +8,7 @@ dnf install nodejs -y &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 echo copy Backend Service File
@@ -16,7 +16,7 @@ cp backend.service /etc/systemd/system/backend.service &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 echo add Application user
@@ -24,7 +24,7 @@ useradd expense &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 echo cleanup content
@@ -33,7 +33,7 @@ rm -rf /app
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 mkdir /app
@@ -45,7 +45,7 @@ download_and_extract
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 echo download dependence
@@ -55,7 +55,7 @@ npm install &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 echo restart servoce
@@ -65,7 +65,7 @@ systemctl start backend &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 
 echo download mysql
@@ -73,7 +73,7 @@ dnf install mysql -y &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAIED\e[0m"
+    echo -e "\e[31mFAIED\e[0m"
     fi
 echo load schema
 mysql -h 172.31.95.105 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
