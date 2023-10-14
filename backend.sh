@@ -27,16 +27,12 @@ fi
 stat_check
 
 echo cleanup content
-rm -rf /app
+rm -rf /app &>>$log_file
 stat_check
 
 mkdir /app
 cd /app
-echo download app content
-
 download_and_extract
-
-stat_check
 
 echo download dependence
 
