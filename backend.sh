@@ -80,6 +80,6 @@ mysql -h 172.31.95.105 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_f
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
-    echo "\e[31mFAILED\e[0m"
+    echo -e "\e[31mFAILED\e[0m"
     fi
 
