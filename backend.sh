@@ -5,7 +5,7 @@ component=backend
 echo install nodejs
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
 dnf install nodejs -y &>>$log_file
-if [ $? -eq 0 ] then
+if [ $? -eq 0 ]; then
   echo SUCSEES
   else
     echo FAIED
