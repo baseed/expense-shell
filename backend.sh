@@ -9,12 +9,12 @@ stat_check
 
 echo copy Backend Service File
 cp backend.service /etc/systemd/system/backend.service &>>$log_file
-if [ $? -eq 0 ]; then
+
   stat_check
 
 echo add Application user
 useradd expense &>>$log_file
-if [ $? -eq 0 ]; then
+
  stat_check
 
 echo cleanup content
