@@ -9,6 +9,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 echo copy Backend Service File
@@ -17,6 +18,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 echo add Application user
@@ -25,6 +27,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 echo cleanup content
@@ -34,6 +37,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 mkdir /app
@@ -46,6 +50,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 echo download dependence
@@ -56,6 +61,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 echo restart servoce
@@ -66,6 +72,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    exit
     fi
 
 echo download mysql
@@ -74,6 +81,7 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAIED\e[0m"
+    eit
     fi
 echo load schema
 mysql -h 172.31.95.105 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
@@ -81,5 +89,6 @@ if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCSEES\e[0m"
   else
     echo -e "\e[31mFAILED\e[0m"
+    exit
     fi
 
