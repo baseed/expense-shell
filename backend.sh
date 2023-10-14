@@ -4,18 +4,22 @@ component=backend
 
 echo install nodejs
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
+stat_check
+
 dnf install nodejs -y &>>$log_file
 stat_check
 
 echo copy Backend Service File
 cp backend.service /etc/systemd/system/backend.service &>>$log_file
 
-  stat_check
+stat_check
 
 echo add Application user
-useradd expense &>>$log_file
-
- stat_check
+id expense &>>$log_file
+if [ $? -ne 0 ];then
+useradd  expense &>>$log_file
+fi
+stat_check
 
 echo cleanup content
 rm -rf /app
