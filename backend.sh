@@ -19,6 +19,7 @@ id expense &>>$log_file
 if [ $? -ne 0 ];then
 useradd  expense &>>$log_file
 fi
+
 stat_check
 
 echo cleanup content
