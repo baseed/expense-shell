@@ -23,20 +23,20 @@ id expense &>>$log_file
 if [ $? -ne 0 ];then
 useradd  expense &>>$log_file
 fi
-
 stat_check
 
-echo cleanup content
+echo cleanup app content
 rm -rf /app &>>$log_file
 stat_check
 
 mkdir /app
 cd /app
+
 download_and_extract
 
 echo download dependencies
 
-npm install &>>$log_file
+npm install &>>$log_f ile
 
 stat_check
 
