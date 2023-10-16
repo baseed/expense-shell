@@ -20,6 +20,7 @@ stat_check
 
 echo start the nginx service
 systemctl enable nginx &>>$log_file
+stat_check
 
 systemctl restart nginx &>>$log_file
 stat_check
