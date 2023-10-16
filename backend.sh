@@ -36,7 +36,7 @@ download_and_extract
 
 echo download dependencies
 
-npm install &>>$log_f ile
+npm install &>>$log_file
 
 stat_check
 
