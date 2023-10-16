@@ -3,7 +3,9 @@ source commen.sh
 component=backend
 
 type npm &>>$log_file
-  if [$? -ne 0 ];then
+
+  if [ $? -ne 0 ]; then
+
   echo install nodejs
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
   stat_check
@@ -20,7 +22,7 @@ stat_check
 echo add Application user
 id expense &>>$log_file
 
-if [ $? -ne 0 ];then
+if [ $? -ne 0 ]; then
 useradd  expense &>>$log_file
 fi
 stat_check
