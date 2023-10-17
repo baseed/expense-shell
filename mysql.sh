@@ -1,6 +1,6 @@
 source commen.sh
 echo disable mysql
-dnf module disable mysql -y &>>$log_file
+dnf module disable mysql -y &>>  $log_file
 stat_check
 
 echo copy mysql repo file
