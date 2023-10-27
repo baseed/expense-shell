@@ -22,6 +22,6 @@ echo enable the nginx service
 systemctl enable nginx &>>$log_file
 stat_check
 
-echo start the nginx service
+echo Restart the nginx service
 systemctl restart nginx &>>$log_file
 stat_check
