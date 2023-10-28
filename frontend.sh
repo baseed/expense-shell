@@ -18,9 +18,9 @@ cd /usr/share/nginx/html
 download_and_extract
 
 
-echo enable the nginx service
+echo Restart the nginx service
 systemctl enable nginx &>>$log_file
-stat_check
+#stat_check
 
 echo Restart the nginx service
 systemctl restart nginx &>>$log_file
