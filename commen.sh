@@ -6,7 +6,7 @@ download_and_extract(){
 
 stat_check
 
-  echo Extracting $component
+  echo Extracting baseec $component
   unzip /tmp/$component.zip &>>$log_file
  stat_check
 }
