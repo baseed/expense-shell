@@ -53,7 +53,7 @@ dnf install mysql -y &>>$log_file
 stat_check
 
 echo load schema
-#mysql_root_password=$1
-mysql -h mysql.baseed.online mysql -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
+mysql_root_password=$1
+mysql -h mysql.baseed.online mysql -uroot -p$mysql_root_password < /app/schema/backend.sql &>>$log_file
 stat_check
 
