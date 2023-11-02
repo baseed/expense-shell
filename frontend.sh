@@ -1,5 +1,4 @@
 source commen.sh
-
 component=frontend
 
 echo installing nginx
@@ -16,7 +15,6 @@ stat_check
 cd /usr/share/nginx/html
 
 download_and_extract
-
 
 echo enable the nginx service
 systemctl enable nginx &>>$log_file
